@@ -23,21 +23,21 @@ port			= ""
 
 
 def usage():
-	print "<PyNet>"
-	print "Usage: pynet.py -t <target_IP> -p <port>"
-	print "Options: "
-	print "-l --listen 			: listen on <host>:<port> for incoming connections"
-	print "-e --execute=<file to run>	: execute the given file upon receiving a connection"
-	print "-c --command			: initialize a command shell"
-	print "-u --upload=<destination>	: upon receiving a connection, upload a file and write to <destination>"
-	print
-	print
-	print "Examples: "
-	print "pynet.py -t 192.168.0.1 -p 5555 -l -c"
-	print "pynet.py -t 192.168.0.1 -p 5555 -l -u=c:\\target.exe"
-	print "pynet.py -t 192.168.0.1 -p 5555 -l -e=\"cat /etc/passwd\""
-	print "echo 'ABCDEFGHI' | ./pynet.py -t 192.168.11.12 -p 135"
-	print
+	print '''
+<PyNet>\n
+Usage: pynet.py -t <target_IP> -p <port>\n
+Options: 
+-l --listen 			: listen on <host>:<port> for incoming connections
+-e --execute=<file to run>	: execute the given file upon receiving a connection
+-c --command			: initialize a command shell
+-u --upload=<destination>	: upon receiving a connection, upload a file and write to <destination>
+
+Examples: 
+pynet.py -t 192.168.0.1 -p 5555 -l -c
+pynet.py -t 192.168.0.1 -p 5555 -l -u=c:\\target.exe
+pynet.py -t 192.168.0.1 -p 5555 -l -e=\"cat /etc/passwd\"
+echo 'ABCDEFGHI' | ./pynet.py -t 192.168.11.12 -p 135
+	'''
 	sys.exit(0)
 
 
@@ -225,4 +225,3 @@ def main():
 		server_loop()
 
 main()
-
