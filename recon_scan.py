@@ -1,3 +1,7 @@
+'''
+Script by Xapax: https://github.com/xapax
+'''
+
 #!/usr/bin/env python
 import subprocess
 import multiprocessing
